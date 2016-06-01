@@ -1,15 +1,15 @@
-package ${defaultPackage}
+package grooid.app
 
-import android.app.Activity
 import android.app.AlertDialog
 import android.os.Bundle
+import android.support.v7.app.ActionBarActivity
 import android.view.Menu
 import android.view.MenuItem
-import groovy.transform.CompileStatic
 import com.arasthel.swissknife.annotations.OnUIThread
+import groovy.transform.CompileStatic
 
 @CompileStatic
-class MainActivity extends Activity {
+class MainActivity extends ActionBarActivity {
       
     @Override
     void onCreate(Bundle savedInstanceState) {

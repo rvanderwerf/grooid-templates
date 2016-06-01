@@ -1,4 +1,4 @@
-package ${defaultPackage}
+package grooid.app
 
 import android.app.Activity
 import android.content.Intent
