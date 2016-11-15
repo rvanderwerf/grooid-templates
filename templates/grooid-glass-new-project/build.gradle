@@ -3,14 +3,14 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.2.3'
-        classpath 'org.codehaus.groovy:gradle-groovy-android-plugin:0.3.6'
+        classpath 'com.android.tools.build:gradle:2.2.2'
+        classpath 'org.codehaus.groovy:groovy-android-gradle-plugin:1.1.0'
         //classpath 'net.kaleidos.gradle.plugins:emerger:0.0.1'
     }
 }
 
 apply plugin: 'com.android.application'
-apply plugin: 'groovyx.grooid.groovy-android'
+apply plugin: 'groovyx.android'
 //apply plugin: 'net.kaleidos.gradle.plugins.emerger'
 
 android {
@@ -29,6 +29,7 @@ android {
 
     packagingOptions {
         exclude 'LICENSE.txt' // Needed by Spock/Android
+        pickFirst 'META-INF/groovy-release-info.properties'
     }
 
     lintOptions {
@@ -53,7 +54,7 @@ dependencies {
     // Android tools
     compile 'com.android.support:support-v4:${androidSupportV4}'
     // Groovy version
-    compile 'org.codehaus.groovy:groovy:2.4.4:grooid'
+    compile 'org.codehaus.groovy:groovy:2.4.7:grooid'
     // Groovy Json handling
     compile ('org.codehaus.groovy:groovy-json:2.4.0-rc-1') {
         transitive = false
