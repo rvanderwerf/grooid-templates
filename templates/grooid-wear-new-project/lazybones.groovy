@@ -13,11 +13,11 @@ def props = [projectName: projectDir.name]
 
 props.defaultPackage    = ask('DEFAULT source code package ? [grooid.app]: ', 'grooid.app', 'defaultPackage')
 props.minSdkVersion     = ask('MIN version of SDK you want to target ? [19]: ', '19', 'minSdkVersion')
-props.targetSdkVersion  = ask('MAX version of SDK you want to target ? [21]: ', '21', 'targetSdkVersion')
-props.buildToolsVersion = ask('DEFAULT version for Android Build Tools ? [22.0.1]: ', '22.0.1', 'buildToolsVersion')
-props.androidSupportV4  = ask('DEFAULT version for Android support v4 ? [21.0.0]: ', '21.0.0', 'androidSupportV4')
-props.androidSupportV13  = ask('DEFAULT version for Android support v13 ? [22.0.0]: ', '22.0.0', 'androidSupportV13')
-props.grooidVersion  = ask('DEFAULT version for Grooid Android ? [2.4.4]: ', '2.4.4', 'grooidVersion')
+props.targetSdkVersion  = ask('MAX/TARGET version of SDK you want to target ? [25]: ', '21', 'targetSdkVersion')
+props.buildToolsVersion = ask('DEFAULT version for Android Build Tools ? [24.0.1]: ', '24.0.1', 'buildToolsVersion')
+props.androidSupportV4  = ask('DEFAULT version for Android support v4 ? [24.1.0]: ', '24.1.0', 'androidSupportV4')
+props.androidSupportV13  = ask('DEFAULT version for Android support v13 ? [24.1.0]: ', '24.1.0', 'androidSupportV13')
+props.grooidVersion  = ask('DEFAULT version for Grooid Android ? [2.4.7]: ', '2.4.7', 'grooidVersion')
 
 // --------------------------------------------
 // ----------- PROCESSING TEMPLATES -----------

@@ -3,15 +3,15 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.2.3'
-        classpath 'org.codehaus.groovy:gradle-groovy-android-plugin:0.3.6'
-        classpath 'net.kaleidos.gradle.plugins:emerger:0.0.1'
+        classpath 'com.android.tools.build:gradle:2.2.2'
+        classpath 'org.codehaus.groovy:groovy-android-gradle-plugin:1.1.0'
+        //classpath 'net.kaleidos.gradle.plugins:emerger:0.0.2'
     }
 }
 
 apply plugin: 'com.android.application'
-apply plugin: 'groovyx.grooid.groovy-android'
-apply plugin: 'net.kaleidos.gradle.plugins.emerger'
+apply plugin: 'groovyx.android'
+//apply plugin: 'net.kaleidos.gradle.plugins.emerger' // doesn't seem to work with new android tools versions
 
 android {
 
@@ -29,6 +29,7 @@ android {
 
     packagingOptions {
         exclude 'LICENSE.txt' // Needed by Spock/Android
+        pickFirst 'META-INF/groovy-release-info.properties'
     }
 
     lintOptions {
@@ -60,11 +61,16 @@ dependencies {
     }
 
     // Getting rid of boiler plate code
-    compile 'com.arasthel:swissknife:1.3.1'
+    compile 'com.arasthel:swissknife:1.4.0'
     // Rest handling
-    compile 'com.squareup.retrofit:retrofit:1.9.0'
+    compile 'com.squareup.retrofit:retrofit:2.0.0-beta2'
     // Imaging
     compile 'com.squareup.picasso:picasso:2.5.2'
+
+    compile 'com.android.support:multidex:1.0.1'
+    // play services for network functions to work to mobile app
+    compile 'com.google.android.gms:play-services-wearable:8.4.0'
+
 
     // Spock/Android
     androidTestCompile "com.andrewreitz:spock-android:1.2.1"

@@ -5,14 +5,14 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.2.3'
-        classpath 'org.codehaus.groovy:gradle-groovy-android-plugin:0.3.6'
+        classpath 'com.android.tools.build:gradle:2.2.2'
+        classpath 'org.codehaus.groovy:groovy-android-gradle-plugin:1.1.0'
     }
 }
 
 ext {
     commonVersions = [
-            grooidVersion: '2.4.4',
+            grooidVersion: '2.4.7',
             androidSupportV13: "${androidSupportV13}",
             buildToolsVersion: "${buildToolsVersion}",
             compileSdkVersion: ${targetSdkVersion}
@@ -20,7 +20,7 @@ ext {
     
 }
 allprojects {
-    ext.groovyVersion = '2.4.3'
+    ext.groovyVersion = '2.4.7'
     repositories {
         jcenter()
     }

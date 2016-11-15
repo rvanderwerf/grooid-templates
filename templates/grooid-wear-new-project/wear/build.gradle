@@ -3,14 +3,14 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.2.3'
-        classpath 'org.codehaus.groovy:gradle-groovy-android-plugin:0.3.6'
-      
+        classpath 'com.android.tools.build:gradle:2.2.2'
+        classpath 'org.codehaus.groovy:groovy-android-gradle-plugin:1.1.0'
+
     }
 }
 
 apply plugin: 'com.android.application'
-apply plugin: 'groovyx.grooid.groovy-android'
+apply plugin: 'groovyx.android'
 
 
 android {
@@ -29,6 +29,7 @@ android {
 
     packagingOptions {
         exclude 'LICENSE.txt' // Needed by Spock/Android
+        pickFirst 'META-INF/groovy-release-info.properties'
     }
 
     lintOptions {
@@ -51,7 +52,7 @@ repositories {
 
 dependencies {
     // Wearable
-    compile 'com.google.android.support:wearable:1.1.0'
+    compile 'com.google.android.support:wearable:1.4.0'
     compile "com.android.support:support-v13:${androidSupportV13}"
     // Android tools
     compile 'com.android.support:support-v4:${androidSupportV4}'
@@ -61,12 +62,17 @@ dependencies {
     compile ('org.codehaus.groovy:groovy-json:2.4.0-rc-1') {
         transitive = false
     }
+    compile 'com.android.support:multidex:1.0.1'
 
     // Getting rid of boiler plate code
-    compile 'com.arasthel:swissknife:1.3.1'
+    compile 'com.arasthel:swissknife:1.4.0'
 
     // Imaging
     compile 'com.squareup.picasso:picasso:2.5.2'
+
+    // play services for network functions to work to mobile app
+    compile 'com.google.android.gms:play-services-wearable:8.4.0'
+
 
     // Spock/Android
     androidTestCompile "com.andrewreitz:spock-android:1.2.1"
