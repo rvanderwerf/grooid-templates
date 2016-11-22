@@ -14,9 +14,9 @@ apply plugin: 'org.asciidoctor.gradle.asciidoctor'
 
 lazybones {
     licenses = ["Apache-2.0"]
-    repositoryName = "marioggar/grooid-templates"
-    repositoryUsername = bintrayUser
-    repositoryApiKey = bintrayKey
+    repositoryName = "rvanderwerf/grooid-templates"
+    repositoryUsername = project.property("bintrayUser")
+    repositoryApiKey = project.property("bintrayKey")
 }
 
 asciidoctor {

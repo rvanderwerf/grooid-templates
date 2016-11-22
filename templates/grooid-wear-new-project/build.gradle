@@ -15,7 +15,7 @@ ext {
             grooidVersion: '2.4.7',
             androidSupportV13: "${androidSupportV13}",
             buildToolsVersion: "${buildToolsVersion}",
-            compileSdkVersion: ${targetSdkVersion}
+            compileSdkVersion: ${compileSdkVersion}
     ]
     
 }

@@ -15,7 +15,7 @@ apply plugin: 'groovyx.android'
 
 android {
 
-    compileSdkVersion ${targetSdkVersion}
+    compileSdkVersion ${compileSdkVersion}
     buildToolsVersion "${buildToolsVersion}"
 
     defaultConfig {

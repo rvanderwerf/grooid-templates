@@ -13,6 +13,7 @@ def props = [projectName: projectDir.name]
 
 props.defaultPackage    = ask('DEFAULT source code package ? [grooid.app]: ', 'grooid.app', 'defaultPackage')
 props.minSdkVersion     = ask('MIN version of SDK you want to target ? [19]: ', '19', 'minSdkVersion')
+props.compileSdkVersion     = ask('COMPILE version of SDK you want to target ? [24]: ', '24', 'compileSdkVersion')
 props.targetSdkVersion  = ask('MAX/TARGET version of SDK you want to target ? [25]: ', '21', 'targetSdkVersion')
 props.buildToolsVersion = ask('DEFAULT version for Android Build Tools ? [24.0.1]: ', '24.0.1', 'buildToolsVersion')
 props.androidSupportV4  = ask('DEFAULT version for Android support v4 ? [24.1.0]: ', '24.1.0', 'androidSupportV4')
